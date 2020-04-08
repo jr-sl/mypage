@@ -1,0 +1,1640 @@
+.xyz {
+  color: #bebebe;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.indexPage {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  position: absolute;
+}
+.menu {
+  float: left;
+  width: 200px;
+  height: 100%;
+  background-color: #000c17;
+}
+.menu .el-menu {
+  border: none;
+}
+.menu .menuHeader {
+  color: white;
+  text-align: left;
+  padding: 20px;
+  padding-left: 30px;
+}
+.menu .el-menu-item {
+  background-color: #000c17;
+  color: #bebebe;
+}
+.menu .el-menu-item:hover {
+  color: #efefef;
+}
+.menu .el-menu-item.is-active {
+  background-color: #1890ff;
+  color: white;
+}
+.content {
+  float: left;
+  width: calc(100% - 200px);
+}
+.content .contentHeader {
+  padding: 10px 20px;
+  line-height: 40px;
+}
+.content .tabContent {
+  padding: 20px;
+  box-sizing: content-box;
+}
+.header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.5);
+  overflow: visible;
+  z-index: 10;
+}
+.header::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.loginBox {
+  line-height: 40px;
+}
+.loginBox .loginItem {
+  margin-right: 10px;
+}
+.headerNav .el-tabs__nav-scroll {
+  background-color: #ff9933;
+  padding-top: 10px;
+  padding-left: 100px;
+}
+.headerNav .el-tabs__nav-scroll .el-tabs__nav {
+  border: none;
+}
+.headerNav .el-tabs__nav-scroll .el-tabs__item {
+  border: none;
+  color: white;
+}
+.headerNav .el-tabs__nav-scroll .el-tabs__item.is-active {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.vInputLabel {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1.2;
+  color: #cccfd6;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  background-color: transparent;
+  font-weight: normal;
+  transition: top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.vInputLabel.activeLabel {
+  color: #409EFF;
+}
+.labelBar {
+  display: inline-block;
+  width: 0px;
+  line-height: 1.2;
+  position: absolute;
+  left: 6px;
+  top: -6px;
+  opacity: 0;
+  white-space: nowrap;
+  color: white;
+  background-color: white;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  transform: scale(0.7);
+  transition: width 0.3s cubic-bezier(0.65, 0.05, 0.79, 0.53) 0s, opacity 0.1s cubic-bezier(0.65, 0.05, 0.79, 0.53) 0s;
+}
+.vInputBox {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.vInputBox.inputActive .vInputLabel {
+  top: -8px;
+  transform: scale(0.7);
+}
+.vInputBox.inputActive .labelBar {
+  transform: scale(0.7);
+  width: auto;
+  padding: 0px 6px;
+  opacity: 1;
+}
+.vInputBoxSmall {
+  height: 32px;
+  line-height: 32px;
+}
+.vInputBoxSmall .vInput {
+  height: 32px;
+  line-height: 30px;
+}
+.vInputBoxBig {
+  height: 42px;
+  line-height: 42px;
+}
+.vInputBoxBig .vInput {
+  height: 40px;
+  line-height: 38px;
+}
+.vInput {
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  padding: 0 15px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.vInput.plain {
+  border: none;
+  border-bottom: 1px solid #dcdfe6;
+  padding-top: 10px;
+}
+.vInput:hover {
+  border-color: #c0c4cc;
+}
+.vInput:focus {
+  border-color: #409EFF;
+}
+.treePop {
+  min-width: 193px;
+}
+.treeSpan {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.inlineItem {
+  vertical-align: middle;
+}
+.treeContainer {
+  vertical-align: middle;
+  display: block;
+  height: 32px;
+  line-height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+}
+.treeContainer .treeControl {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+  height: 32px;
+  background-color: white;
+  line-height: 32px;
+}
+.treeContainer .treeControl > i {
+  top: 8px;
+  right: 10px;
+  position: absolute;
+  height: 10px;
+  font-size: 14px;
+  color: #c9c9c9;
+  border-radius: 50%;
+}
+.treeContainer .treeControl > i.el-icon-arrow-up {
+  transform-origin: 50% 7px;
+  transform: rotate(180deg);
+  transition: transform linear 0.2s;
+}
+.treeContainer .treeControl > i.el-icon-arrow-up.iconShow {
+  transform: rotate(0deg);
+}
+.treeContainer:before {
+  content: ' ';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.treeContainer:hover {
+  border-color: #0c99fd;
+  outline: none;
+}
+.treeContainer:focus {
+  box-shadow: 0px 0px 8px 0px #0c99fd;
+}
+.treeContainer .el-tag {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.treeContainer .el-tag:first-child {
+  margin-left: 6px;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.uploadBtn {
+  border: 1px solid #1890ff;
+  color: white;
+  background-color: #1890ff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+.uploadBtn:hover {
+  background-color: #0076e4;
+  color: white;
+}
+.drasterBoard {
+  height: 100%;
+  width: 100%;
+}
+.drasterBoard .drasterInput {
+  display: none !important;
+}
+.upLoadCoverDragBox {
+  background-color: #f9f9f9;
+  border: 1px dashed #efefef;
+  display: block;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.upLoadCoverDragBox:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.upLoadCoverDragBox .dragContent {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  user-select: none;
+}
+.upLoadCoverDragBox .dragContent .uploadIcon {
+  color: #4d8fff;
+}
+.upLoadCoverDragBox:focus {
+  box-shadow: 0px 0px 25px 2px #4d8fff;
+  color: #4d8fff;
+}
+.upLoadCoverDragBox.upLoadDragOver {
+  border: 1px dashed #4d8fff;
+  background-color: #c2c2c2;
+  border-width: 2px;
+}
+.upLoadCoverDragBox:hover {
+  border: 1px dashed #4d8fff;
+  color: #4d8fff;
+}
+.upLoadCoverDragBox:hover .uploadIcon {
+  color: #4d8fff;
+}
+.upLoadCoverDragBox.upLoadFocus {
+  box-shadow: 0px 0px 25px 2px #4d8fff;
+  color: #4d8fff;
+}
+.uploadFileList {
+  font-size: 12px;
+}
+.uploadFileList .fileItem {
+  position: relative;
+}
+.uploadFileList .fileItem .deleteBtn {
+  cursor: pointer;
+  position: absolute;
+  height: 16px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  right: 0px;
+  display: inline-block;
+  font-size: 14px;
+}
+.uploadFileList .fileItem .deleteBtn:hover {
+  color: #2b8aeb;
+}
+.head3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+.head4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px 0px;
+}
+.verticalDivider {
+  cursor: text;
+  color: #0c99fd;
+  line-height: 30px;
+  margin-right: 8px;
+}
+.queryForm .inlineItem {
+  display: inline-block;
+  width: 300px;
+}
+.tableContn {
+  padding: 20px 0px;
+}
+.tableContn .controlBar .addLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #5ccc3e;
+}
+.tableContn .controlBar .addLink:hover {
+  color: #47aa2d;
+}
+.tableContn .controlBar .editLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #4b69ef;
+}
+.tableContn .controlBar .editLink:hover {
+  color: #1c42eb;
+}
+.tableContn .controlBar .delLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #ef2623;
+}
+.tableContn .controlBar .delLink:hover {
+  color: #d0120f;
+}
+.tableContn .controlBar .addBtn {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:hover {
+  background-color: #6dd152;
+  border-color: #6dd152;
+}
+.tableContn .controlBar .addBtn:focus {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:active {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:hover {
+  background-color: #50be32;
+  border-color: #50be32;
+}
+.tableContn .controlBar .addBtn:focus {
+  background-color: #47aa2d;
+  border-color: #47aa2d;
+}
+.tableContn .controlBar .editBtn {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:hover {
+  background-color: #627df1;
+  border-color: #627df1;
+}
+.tableContn .controlBar .editBtn:focus {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:active {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:hover {
+  background-color: #3455ed;
+  border-color: #3455ed;
+}
+.tableContn .controlBar .editBtn:focus {
+  background-color: #1c42eb;
+  border-color: #1c42eb;
+}
+.tableContn .controlBar .delBtn {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:hover {
+  background-color: #f13d3b;
+  border-color: #f13d3b;
+}
+.tableContn .controlBar .delBtn:focus {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:active {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:hover {
+  background-color: #e81411;
+  border-color: #e81411;
+}
+.tableContn .controlBar .delBtn:focus {
+  background-color: #d0120f;
+  border-color: #d0120f;
+}
+.tableContn .controlBar .controlBtn {
+  line-height: 30px;
+}
+.tableContn .commonTable {
+  border-color: #ddd;
+  border-width: 0px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.tableContn .commonTable > thead > tr > th {
+  font-size: 12px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  color: #333;
+  padding: 10px 8px;
+  font-weight: 600;
+  background-color: #ebebeb;
+}
+.tableContn .commonTable > tbody > tr > td {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+}
+.tableContn .commonTable > tbody > tr > td .imgLink {
+  color: #0c99fd;
+  cursor: pointer;
+}
+.tableContn .commonTable > tbody > tr > td .imgLink:hover {
+  color: #027dd4;
+}
+.dialogEditForm {
+  padding-right: 20px;
+}
+.dialogEditForm .drasterContn {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogEditForm .drasterContn .draster {
+  width: 48%;
+}
+.dialogEditForm .drasterContn .drasterPreviewLink {
+  width: 48%;
+  display: inline-block;
+}
+.dialogEditForm .drasterContn .drasterPreviewLink .drasterPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dialogEditForm .saveBtnContn {
+  text-align: center;
+}
+.dialogEditForm .vue-treeselect__control {
+  height: 28px;
+}
+.dialogEditForm .vue-treeselect__control .vue-treeselect__placeholder {
+  line-height: 28px;
+}
+.dialogEditForm .ant-select-selection--single {
+  height: 28px;
+}
+.dialogEditForm .ant-select-selection--single .ant-select-selection__rendered {
+  height: 26px;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.title {
+  font-weight: 600;
+}
+.validateError {
+  border-color: #eb4e3e !important;
+  outline-color: #eb4e3e !important;
+  box-shadow: 0px 0px 8px 0px #eb4e3e !important;
+}
+.formAutoc {
+  height: 28px;
+  width: 160px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.formAutoc .tagContainer {
+  line-height: 28px;
+  display: block;
+}
+.formAutoc .tagContainer .tagBoard {
+  line-height: 28px;
+}
+.formAutoc .tagContainer .tagBoard .autocompleteTag {
+  line-height: 28px;
+}
+.formAutoc .tagContainer .tagBoard .autocompleteTag .tagText {
+  line-height: 28px;
+}
+.labelTitle {
+  font-weight: 600;
+  display: block;
+  position: relative;
+  padding-left: 10px;
+}
+.labelTitle:before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 2px solid currentColor;
+}
+.label {
+  color: #999;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.commonContainer {
+  -webkit-box-shadow: 0px 0px 15px #D0DBE1;
+  -moz-box-shadow: 0px 0px 15px #D0DBE1;
+  -ms-box-shadow: 0px 0px 15px #D0DBE1;
+  -o-box-shadow: 0px 0px 15px #D0DBE1;
+  box-shadow: 0px 0px 15px #D0DBE1;
+}
+.linkIcon {
+  color: #ababab;
+  cursor: pointer;
+}
+.linkIcon:hover {
+  color: #3ad8b8;
+}
+.DefaultPrimaryBtn {
+  padding: 3px 10px;
+  border: 1px solid #5370ff;
+  border-radius: 2px;
+  color: #5370ff;
+  background-color: white;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.DefaultPrimaryBtn:focus {
+  outline: none;
+}
+.DefaultPrimaryBtn + .DefaultBtn {
+  margin-left: 10px;
+}
+.DefaultPrimaryBtn + .PrimaryBtn {
+  margin-left: 10px;
+}
+.DefaultPrimaryBtn:hover {
+  color: #333;
+}
+.DefaultPrimaryBtn:active {
+  border-color: #2046ff;
+  color: #2046ff;
+}
+.DefaultPrimaryBtn:disabled {
+  cursor: not-allowed;
+  color: #efefef;
+  border-color: #efefef;
+}
+.DefaultPrimaryBtn + .DefaultBtn {
+  margin-left: 10px;
+}
+.DefaultPrimaryBtn + .DefaultPrimaryBtn {
+  margin-left: 10px;
+}
+.DefaultPrimaryBtn + .PrimaryBtn {
+  margin-left: 10px;
+}
+.DefaultPrimaryBtn:focus {
+  outline: none;
+}
+.DefaultPrimaryBtn.active {
+  background-color: #5370ff;
+  border-color: #5370ff;
+  color: white;
+}
+.DefaultPrimaryBtn:hover {
+  background-color: #5370ff;
+  border-color: #5370ff;
+  color: white;
+}
+.DefaultPrimaryBtn:hover:active {
+  background-color: #395bff;
+  border-color: #395bff;
+  color: white;
+}
+.DefaultBtn {
+  padding: 3px 10px;
+  border: 1px solid #25ba9c;
+  border-radius: 2px;
+  color: #25ba9c;
+  background-color: white;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.DefaultBtn + .DefaultBtn {
+  margin-left: 10px;
+}
+.DefaultBtn + .PrimaryBtn {
+  margin-left: 10px;
+}
+.DefaultBtn:hover {
+  color: #333;
+}
+.DefaultBtn:active {
+  border-color: #1d8f78;
+  color: #1d8f78;
+}
+.DefaultBtn:disabled {
+  cursor: not-allowed;
+  color: #efefef;
+  border-color: #efefef;
+}
+.PrimaryBtn {
+  padding: 3px 10px;
+  border: 1px solid #25ba9c;
+  border-radius: 2px;
+  background-color: #25ba9c;
+  color: white;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.PrimaryBtn + .DefaultBtn {
+  margin-left: 10px;
+}
+.PrimaryBtn + .PrimaryBtn {
+  margin-left: 10px;
+}
+.PrimaryBtn:hover {
+  background-color: #3ad8b8;
+  border-color: #3ad8b8;
+}
+.PrimaryBtn:active {
+  border-color: #1d8f78;
+  background-color: #1d8f78;
+}
+.PrimaryBtn:disabled {
+  cursor: not-allowed;
+  background-color: #efefef;
+  border-color: #efefef;
+}
+.head3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+.head4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px 0px;
+}
+.verticalDivider {
+  cursor: text;
+  color: #0c99fd;
+  line-height: 30px;
+  margin-right: 8px;
+}
+.queryForm .inlineItem {
+  display: inline-block;
+  width: 300px;
+}
+.tableContn {
+  padding: 20px 0px;
+}
+.tableContn .controlBar .addLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #5ccc3e;
+}
+.tableContn .controlBar .addLink:hover {
+  color: #47aa2d;
+}
+.tableContn .controlBar .editLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #4b69ef;
+}
+.tableContn .controlBar .editLink:hover {
+  color: #1c42eb;
+}
+.tableContn .controlBar .delLink {
+  line-height: 26px;
+  margin-right: 8px;
+  color: #ef2623;
+}
+.tableContn .controlBar .delLink:hover {
+  color: #d0120f;
+}
+.tableContn .controlBar .addBtn {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:hover {
+  background-color: #6dd152;
+  border-color: #6dd152;
+}
+.tableContn .controlBar .addBtn:focus {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:active {
+  background-color: #5ccc3e;
+  border-color: #5ccc3e;
+}
+.tableContn .controlBar .addBtn:hover {
+  background-color: #50be32;
+  border-color: #50be32;
+}
+.tableContn .controlBar .addBtn:focus {
+  background-color: #47aa2d;
+  border-color: #47aa2d;
+}
+.tableContn .controlBar .editBtn {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:hover {
+  background-color: #627df1;
+  border-color: #627df1;
+}
+.tableContn .controlBar .editBtn:focus {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:active {
+  background-color: #4b69ef;
+  border-color: #4b69ef;
+}
+.tableContn .controlBar .editBtn:hover {
+  background-color: #3455ed;
+  border-color: #3455ed;
+}
+.tableContn .controlBar .editBtn:focus {
+  background-color: #1c42eb;
+  border-color: #1c42eb;
+}
+.tableContn .controlBar .delBtn {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:hover {
+  background-color: #f13d3b;
+  border-color: #f13d3b;
+}
+.tableContn .controlBar .delBtn:focus {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:active {
+  background-color: #ef2623;
+  border-color: #ef2623;
+}
+.tableContn .controlBar .delBtn:hover {
+  background-color: #e81411;
+  border-color: #e81411;
+}
+.tableContn .controlBar .delBtn:focus {
+  background-color: #d0120f;
+  border-color: #d0120f;
+}
+.tableContn .controlBar .controlBtn {
+  line-height: 30px;
+}
+.tableContn .elLightTable {
+  border-color: #c6e8ff;
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: none;
+}
+.tableContn .elLightTable thead > tr > th {
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  color: white;
+  padding: 6px 4px;
+  font-weight: 600;
+  background-color: #0d99fd;
+  border-color: #c6e8ff;
+}
+.tableContn .elLightTable tbody > tr > td {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+  border-color: #c6e8ff;
+}
+.tableContn .elLightTable tbody > tr > td .link {
+  cursor: pointer;
+  color: #0c99fd;
+}
+.tableContn .elLightTable tbody > tr > td .link:hover {
+  color: #027dd4;
+}
+.tableContn .elLightTable tbody > tr > td .imgLink {
+  color: #0c99fd;
+  cursor: pointer;
+}
+.tableContn .elLightTable tbody > tr > td .imgLink:hover {
+  color: #027dd4;
+}
+.tableContn .elLightTable tbody > tr:nth-child(2n):hover > td {
+  background-color: #f5f7fa;
+}
+.tableContn .elLightTable tbody > tr:nth-child(2n) > td {
+  background-color: #f7fdff;
+}
+.tableContn .elLightTable tbody > tr:nth-child(n):hover > td {
+  background-color: #f5f7fa;
+}
+.tableContn .commonTable {
+  border-color: #c6e8ff;
+  border-width: 0px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+.tableContn .commonTable > thead > tr > th {
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  color: white;
+  padding: 10px 8px;
+  font-weight: bold;
+  background-color: #0d99fd;
+}
+.tableContn .commonTable > tbody > tr > td {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  padding: 5px;
+}
+.tableContn .commonTable > tbody > tr > td .imgLink {
+  color: #0c99fd;
+  cursor: pointer;
+}
+.tableContn .commonTable > tbody > tr > td .imgLink:hover {
+  color: #027dd4;
+}
+.tableContn .lightTable {
+  border-color: #c6e8ff;
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: none;
+}
+.tableContn .lightTable > thead > tr > th {
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  color: white;
+  padding: 10px 8px;
+  font-weight: 600;
+  background-color: #0d99fd;
+  border-color: #c6e8ff;
+}
+.tableContn .lightTable > tbody > tr > td {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+  border-color: #c6e8ff;
+  font-size: 14px;
+}
+.tableContn .lightTable > tbody > tr > td .link {
+  cursor: pointer;
+  color: #0c99fd;
+}
+.tableContn .lightTable > tbody > tr > td .link:hover {
+  color: #027dd4;
+}
+.tableContn .lightTable > tbody > tr > td .imgLink {
+  color: #0c99fd;
+  cursor: pointer;
+}
+.tableContn .lightTable > tbody > tr > td .imgLink:hover {
+  color: #027dd4;
+}
+.tableContn .lightTable > tbody > tr:nth-child(2n) > td {
+  background-color: #f7fdff;
+}
+.commonTable {
+  border-color: #ddd;
+  border-width: 0px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.commonTable > thead > tr > th {
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  color: #333;
+  padding: 10px 8px;
+  font-weight: 600;
+  background-color: #f1f1f1;
+}
+.commonTable > tbody > tr > td {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+}
+.commonTable > tbody > tr > td .imgLink {
+  color: #0c99fd;
+  cursor: pointer;
+}
+.commonTable > tbody > tr > td .imgLink:hover {
+  color: #027dd4;
+}
+.dialogEditForm {
+  padding-right: 20px;
+}
+.dialogEditForm .drasterContn {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogEditForm .drasterContn .draster {
+  width: 48%;
+}
+.dialogEditForm .drasterContn .drasterPreviewLink {
+  width: 48%;
+  display: inline-block;
+}
+.dialogEditForm .drasterContn .drasterPreviewLink .drasterPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dialogEditForm .saveBtnContn {
+  text-align: center;
+}
+.dialogEditForm .vue-treeselect__control {
+  height: 28px;
+}
+.dialogEditForm .vue-treeselect__control .vue-treeselect__placeholder {
+  line-height: 28px;
+}
+.dialogEditForm .ant-select-selection--single {
+  height: 28px;
+}
+.dialogEditForm .ant-select-selection--single .ant-select-selection__rendered {
+  height: 26px;
+}
+.plainTable {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border: 1px solid #d6d6d6;
+}
+.plainTable > thead > tr > th {
+  border-color: #d6d6d6;
+  background-color: #f2f2f2;
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+.plainTable > tbody > tr > td {
+  border-color: #d6d6d6;
+  background-color: white;
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.jrPopover.fold-enter {
+  transform-origin: 50% 0%;
+  transform: scaleY(0.1);
+  opacity: 0;
+}
+.jrPopover.fold-leave-to {
+  transform-origin: 50% 0%;
+  transform: scaleY(0.1);
+  opacity: 0;
+}
+.jrPopover.fold-enter-to {
+  transform-origin: 50% 0%;
+  transform: scaleY(1);
+  opacity: 1;
+}
+.jrPopover.fold-leave {
+  transform-origin: 50% 0%;
+  transform: scaleY(1);
+  opacity: 1;
+}
+.jrPopover.fold-leave-active {
+  -webkit-transition: transform 0.1s linear, opacity 0.1s linear;
+  -moz-transition: transform 0.1s linear, opacity 0.1s linear;
+  -ms-transition: transform 0.1s linear, opacity 0.1s linear;
+  -o-transition: transform 0.1s linear, opacity 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+.jrPopover.fold-enter-active {
+  -webkit-transition: transform 0.1s linear, opacity 0.1s linear;
+  -moz-transition: transform 0.1s linear, opacity 0.1s linear;
+  -ms-transition: transform 0.1s linear, opacity 0.1s linear;
+  -o-transition: transform 0.1s linear, opacity 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.multiAutocomplete {
+  display: inline-block;
+  height: 28px;
+  padding: 0px;
+  width: 100%;
+  position: relative;
+  vertical-align: middle;
+}
+.multiAutocomplete > span {
+  display: block;
+}
+.multiAutocomplete.autoDisabled .tagContainer {
+  background-color: #f4f6f9;
+  border-color: #dbdee5;
+}
+.multiAutocomplete .tagContainer {
+  display: inline-block;
+  height: 100%;
+  border: 1px solid #efefef;
+  cursor: text;
+  line-height: 26px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.multiAutocomplete .tagContainer .tagBoard {
+  display: inline-block;
+  padding: 0px 15px;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+  line-height: 26px;
+  box-sizing: border-box;
+}
+.multiAutocomplete .tagContainer .tagBoard .autocompleteTag {
+  line-height: 26px;
+  display: inline-block;
+  margin-right: 8px;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+}
+.multiAutocomplete .tagContainer .tagBoard .autocompleteTag .tagText {
+  display: inline;
+}
+.multiAutocomplete .tagContainer .tagBoard .autocompleteTag:hover .closeCross {
+  opacity: 1;
+}
+.multiAutocomplete .tagContainer .tagBoard .autocompleteTag .closeCross {
+  color: red;
+  position: absolute;
+  right: -8px;
+  top: -5px;
+  background-color: white;
+  line-height: 1.2;
+  opacity: 0;
+}
+.multiAutocomplete .inputContainer {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.multiAutocomplete .inputContainer .autocompleteInput {
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  height: 30px;
+  display: inline-block;
+  height: 100%;
+  line-height: 26px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 5px;
+}
+.multiAutocomplete .inputContainer .autocompleteInput:hover {
+  border-color: #1890ff;
+}
+.multiAutocomplete .inputContainer .autocompleteInput:focus {
+  border-color: #1890ff;
+  -webkit-box-shadow: 0px 0px 5px 0px #1890ff;
+  -moz-box-shadow: 0px 0px 5px 0px #1890ff;
+  -ms-box-shadow: 0px 0px 5px 0px #1890ff;
+  -o-box-shadow: 0px 0px 5px 0px #1890ff;
+  box-shadow: 0px 0px 5px 0px #1890ff;
+}
+.multiAutocomplete .inputContainer .autocompleteInput:disabled {
+  background-color: #f5f7fa;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-enter {
+  transform-origin: 50% 0%;
+  transform: scaleY(0.1);
+  opacity: 0;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-leave-to {
+  transform-origin: 50% 0%;
+  transform: scaleY(0.1);
+  opacity: 0;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-enter-to {
+  transform-origin: 50% 0%;
+  transform: scaleY(1);
+  opacity: 1;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-leave {
+  transform-origin: 50% 0%;
+  transform: scaleY(1);
+  opacity: 1;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-leave-active {
+  -webkit-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -moz-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -ms-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -o-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+.multiAutocomplete .inputContainer .suggestionContainer.fold-enter-active {
+  -webkit-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -moz-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -ms-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  -o-transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+.hoverTagPop {
+  padding: 0px;
+  background-color: white;
+  overflow-y: auto;
+  min-height: 40px;
+  overflow-x: hidden;
+}
+.hoverTagPop .tagHoverList {
+  width: 100%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #efefef;
+}
+.hoverTagPop .tagHoverListItem {
+  display: block;
+  border: 1px solid #ababab;
+  background-color: #efefef;
+  color: black;
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.hoverTagPop .tagHoverListItem .tagContent {
+  display: block;
+  margin-right: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hoverTagPop .tagHoverListItem .closeCross {
+  position: absolute;
+  right: 1px;
+  top: 0px;
+  cursor: pointer;
+  line-height: 1.2;
+  border-left: 1px solid #ababab;
+}
+.hoverTagPop .tagHoverListItem .closeCross:hover {
+  color: #8f8f8f;
+}
+.suggestionPop {
+  padding: 0px;
+  background-color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 300px;
+}
+.suggestionPop .suggestionContainer {
+  background-color: white;
+  margin: 0px;
+}
+.suggestionPop .suggestionContainer .suggestionList {
+  list-style: none;
+  padding: 0px 0px;
+  margin: 0px;
+  font-size: 12px;
+  border: 1px solid #efefef;
+  background-color: white;
+}
+.suggestionPop .suggestionContainer .suggestionListFetch {
+  text-align: center;
+  width: 100%;
+}
+.suggestionPop .suggestionContainer .suggestionListFetch .content {
+  padding: 10px 5px;
+}
+.suggestionPop .suggestionContainer .suggestionList .noDataItem {
+  text-align: center;
+  font-size: 16px;
+  color: #b4b4b4;
+}
+.suggestionPop .suggestionContainer .suggestionListItem {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  line-height: 1.2;
+  position: relative;
+  width: 100%;
+}
+.suggestionPop .suggestionContainer .suggestionListItem.suSelect {
+  color: #2b8aeb;
+  font-weight: bold;
+}
+.suggestionPop .suggestionContainer .suggestionListItemTick {
+  position: absolute;
+  width: 20px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.suggestionPop .suggestionContainer .suggestionListItemTick:before {
+  line-height: 24px;
+}
+.suggestionPop .suggestionContainer .suggestionListItem .content {
+  margin-right: 20px;
+  display: block;
+  padding: 5px 5px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.suggestionPop .suggestionContainer .suggestionListItem:hover {
+  color: #2b8aeb;
+}
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.checkStateBtn {
+  background-color: #909090;
+  border-color: #909090;
+  color: white;
+}
+.checkStateBtn:hover {
+  background-color: #838383;
+  border-color: #838383;
+}
+.checkStateBtn:focus {
+  background-color: #777777;
+  border-color: #777777;
+}
+.checkStateBtn:hover {
+  color: white;
+}
+.checkStateBtn:focus {
+  color: white;
+}
+.checkStateBtn.active {
+  background-color: #f9871f;
+  border-color: #f9871f;
+}
+.checkStateBtn.active:hover {
+  background-color: #f87a07;
+  border-color: #f87a07;
+}
+.checkStateBtn.active:focus {
+  background-color: #df6e06;
+  border-color: #df6e06;
+}
+.queryContn {
+  padding: 20px;
+  border: 1px solid #efefef;
+  box-shadow: 0px 0px 10px 0px rgba(150, 150, 150, 0.5);
+}
+.queryContn .queryItem {
+  vertical-align: middle;
+}
+.queryContn .inlineItem {
+  vertical-align: middle;
+  display: inline-block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.el-collapse-item__content {
+  padding: 10px 0px;
+}
+.editRow {
+  display: inline-block;
+  width: calc(100% - 100px);
+  overflow: visible;
+  transition: 0.3s background-color;
+  padding: 3px 0px;
+}
+.editRow.active {
+  background-color: #f5f2fa;
+}
+.editRow.main {
+  font-weight: bold;
+  color: #2852f5;
+}
+.editItem {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.editItem.item1 {
+  width: calc((100% - 310px)*0.2);
+}
+.editItem.item2 {
+  width: calc((100% - 310px)*0.45);
+}
+.editItem.item3 {
+  width: calc((100% - 310px)*0.3);
+}
+.editItem.item4 {
+  width: 310px;
+}
+#hotel-handle-detail {
+  width: 1200px;
+  margin: 0px auto;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(150, 150, 150, 0.5);
+}
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+.title {
+  user-select: none;
+}
+.inlineItem {
+  display: inline-block;
+}
+.hotelNameLevel {
+  background-color: #fafafa;
+  padding: 20px;
+  font-size: 14px;
+}
+.hotelNameLevel:after {
+  display: block;
+  visibility: hidden;
+  content: '';
+  clear: both;
+}
+.hotelNameLevel .currentHotel {
+  float: left;
+  width: 90%;
+  color: #4488ef;
+  padding-right: 10px;
+}
+.hotelNameLevel .newHotel {
+  float: left;
+  width: 50%;
+}
+.title {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.hotelDetail {
+  padding: 20px 40px;
+  margin-bottom: 50px;
+}
+.liveInfo {
+  margin-bottom: 10px;
+}
+.liveInfo .title {
+  font-size: 14px;
+}
+.liveInfo .title .liveCount {
+  color: #4488ef;
+}
+.liveInfo .content {
+  background-color: #fafafa;
+  padding: 20px 20px;
+}
+.liveInfo .content .lv1 {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px;
+}
+.liveInfo .content .lv1:after {
+  display: block;
+  visibility: hidden;
+  content: '';
+  clear: both;
+}
+.liveInfo .content .lv1 .CheckTimeTable {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+.liveInfo .content .lv1 .CheckTimeTable > tr > td {
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+.liveInfo .content .lv1 .ChTContn {
+  padding-right: 20px;
+  border-right: 1px solid #efefef;
+  float: left;
+  width: 30%;
+  box-sizing: border-box;
+}
+.liveInfo .content .lv1 .roomContn {
+  float: left;
+  width: 70%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.liveInfo .content .lv2 {
+  position: relative;
+  padding: 10px 0px;
+}
+.liveInfo .content .lv2 .label {
+  position: absolute;
+  width: 90px;
+  left: 0px;
+  top: 10px;
+  color: #ababab;
+}
+.liveInfo .content .lv2 .content {
+  margin-left: 90px;
+}
+.guestInfo {
+  margin-bottom: 20px;
+}
+.dvRate {
+  margin-bottom: 20px;
+}
+.dvRate .dvRateContent {
+  padding: 20px;
+  background-color: #fafafa;
+}
+.roomInfo {
+  margin-bottom: 10px;
+}
+.roomInfo .connectorInput {
+  display: inline-block;
+  margin-right: 20px;
+  width: 200px;
+}
+.roomInfo .hotelRoom {
+  padding: 20px;
+  position: relative;
+  background-color: #fafafa;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+.roomInfo .hotelRoom:after {
+  display: block;
+  visibility: hidden;
+  content: '';
+  clear: both;
+}
+.roomInfo .hotelRoom.active {
+  border: 1px solid #26c2fd;
+  box-shadow: 0px 0px 6px 0px rgba(10, 130, 255, 0.56);
+}
+.roomInfo .hotelRoom .label {
+  width: 100px;
+  margin: 0px;
+  float: left;
+}
+.roomInfo .hotelRoom .bedMod {
+  float: left;
+  width: 100px;
+  color: #4488ef;
+}
+.roomInfo .hotelRoom .roomPersonMod {
+  float: left;
+  width: 500px;
+}
+.roomInfo .hotelRoom .roomPersonMod .roomPersonInfo {
+  margin-bottom: 10px;
+}
+.roomInfo .hotelRoom .roomPersonMod .roomPersonInfo .personRvBtn {
+  margin-left: 10px;
+  padding: 4px;
+}
+.roomInfo .hotelRoom .roomPersonMod .roomPersonInfo .psersonInput {
+  display: inline-block;
+  width: calc(50% - 60px);
+  margin-right: 20px;
+}
+.roomInfo .hotelRoom .personAddBtn {
+  display: block;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+  padding: 4px;
+}
+.orderRemark {
+  margin-bottom: 20px;
+}
+.buyWay {
+  margin-bottom: 20px;
+}
+.buyWay .platformSel {
+  margin-bottom: 20px;
+}
+.buyWay .orderContent {
+  padding: 20px;
+  background-color: #fafafa;
+}
+.buyWay .orderContent .pingzheng {
+  display: inline-block;
+  width: 200px;
+  margin-left: 20px;
+}
+.buyWay .orderContent .rateTable > thead > tr > th {
+  padding: 4px 6px;
+}
+.saveBar {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background-color: #dcf3fe;
+  border: 1px solid #2b8aeb;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  z-index: 3;
+}
+.saveBar:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.saveBar .saveBtn {
+  vertical-align: middle;
+}
+.rateBox {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background-color: #dcf3fe;
+  border: 1px solid #2b8aeb;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  z-index: 3;
+}
+.rateBox:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.rateBox .saveBtn {
+  vertical-align: middle;
+}
+.rateBox .selBoxBtn {
+  margin-left: 30px;
+}
+
+/*# sourceMappingURL=index.css.map*/
