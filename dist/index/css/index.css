@@ -41,10 +41,23 @@ body {
 .content {
   float: left;
   width: calc(100% - 200px);
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
 }
 .content .contentHeader {
   padding: 10px 20px;
+  box-sizing: border-box;
   line-height: 40px;
+  box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.5);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.content .contentBody {
+  box-sizing: border-box;
+  margin-top: 61px;
 }
 .content .tabContent {
   padding: 20px;
