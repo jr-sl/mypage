@@ -1649,5 +1649,54 @@ body {
 .rateBox .selBoxBtn {
   margin-left: 30px;
 }
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.inlineItem {
+  display: inline-block;
+}
+.ctBar {
+  pointer-events: auto;
+  vertical-align: middle;
+}
+.ctRotSlider {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 200px;
+}
+.stampTool {
+  position: absolute;
+  pointer-events: auto;
+  cursor: move;
+  border: 1px dashed black;
+  overflow: hidden;
+}
+.stampTool .toolScaleBar {
+  position: absolute;
+  pointer-events: auto;
+  cursor: ne-resize;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  top: -6px;
+  right: -6px;
+  background-color: #000000;
+  transform-origin: center;
+}
+.stampTool .toolRotateBar {
+  position: absolute;
+  pointer-events: auto;
+  left: 0px;
+  top: 0px;
+}
+.stampTool .toolRotateBar .rotateCircle {
+  cursor: grab;
+}
 
 /*# sourceMappingURL=index.css.map*/
